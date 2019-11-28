@@ -34,6 +34,26 @@ Complete the following tasks before you start trying the Cloud Recording RESTful
     - It is a 32-bit unsigned integer within the range between 1 and (2<sup>32</sup>-1).
     - It is unique and does not clash with any existing UID in the channel.
     - It should not be a string. Ensure that all UIDs in the channel are integers.
+  - `Vender`: The third-party cloud storage vendor.
+  - `Region`: The regional information specified by the third-party cloud storage. When the third-party cloud storage is [Amazon S3](https://aws.amazon.com/s3/?nc1=h_ls) (`vendor` = 1):
+      - `0`: US_EAST_1
+      - `1`: US_EAST_2
+      - `2`: US_WEST_1
+      - `3`: US_WEST_2
+      - `4`: EU_WEST_1
+      - `5`: EU_WEST_2
+      - `6`: EU_WEST_3
+      - `7`: EU_CENTRAL_1
+      - `8`: AP_SOUTHEAST_1
+      - `9`: AP_SOUTHEAST_2
+      - `10`: AP_NORTHEAST_1
+      - `11`: AP_NORTHEAST_2
+      - `12`: SA_EAST_1
+      - `13`: CA_CENTRAL_1
+      - `14`: AP_SOUTH_1
+      - `15`: CN_NORTH_1
+      - `16`: CN_NORTHWEST_1
+      - `17`: US_GOV_WEST_1
   - `Bucket`: The bucket of the third-party cloud storage.
   - `AccessKey`: The access key of the third-party cloud storage.
   - `SecretKey`: The secret key of the third-party cloud storage.
