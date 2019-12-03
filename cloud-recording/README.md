@@ -81,6 +81,8 @@ Now that you have your resource ID, you can call the `start` method to begin rec
 
 You can also call the `query` and the `updateLayout` methods during a recording session. The `query` method allows you to know the status of the recording, and the `updateLayout` method allows you to change the layout configuration of the recording in composite recording mode. 
 
+> Note: Files are recorded in 15 second snippets and if you call `stop` within 15 seconds of calling `start`, no files will be written to your storage server.
+
 
 
 ## Play recorded files online
