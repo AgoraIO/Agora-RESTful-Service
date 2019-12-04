@@ -10,7 +10,7 @@ To know more about what you can do with Cloud Recording RESTful APIs, refer to [
 
 # Prerequisites
 
-Complete the following tasks before you start trying the Cloud Recording RESTful APIs. You can find more details in the [Cloud Recording RESTful API Quickstart](https://docs.agora.io/en/cloud-recording/cloud_recording_rest?platform=All%20Platforms).
+Complete the following tasks before testing/using the Cloud Recording RESTful APIs. 
 
 - Deploy a third-party cloud storage.
 
@@ -18,6 +18,8 @@ Complete the following tasks before you start trying the Cloud Recording RESTful
 
 - An app that integrates the [Agora RTC SDK](https://docs.agora.io/en/Agora%20Platform/terms?platform=All%20Platforms#rtc-sdk).
 - [Install Postman](https://www.getpostman.com/downloads/).
+
+You can find more details in the [Cloud Recording RESTful API Quickstart](https://docs.agora.io/en/cloud-recording/cloud_recording_rest?platform=All%20Platforms).
 
 ## Import Postman collection
 
@@ -78,6 +80,8 @@ Now that you have your resource ID, you can call the `start` method to begin rec
 > The resource ID is valid for five minutes, so you need to start recording with this resource ID within five minutes.
 
 You can also call the `query` and the `updateLayout` methods during a recording session. The `query` method allows you to know the status of the recording, and the `updateLayout` method allows you to change the layout configuration of the recording in composite recording mode. 
+
+> Note: Files are recorded in 15 second snippets and if you call `stop` within 15 seconds of calling `start`, no files will be written to your storage server.
 
 
 
