@@ -1,12 +1,12 @@
 # Agora Cloud Recording Postman Collection
 
-Agora offers a Postman collection that contains sample RESTful API requests for cloud recording. You can use the sample requests to:
+Agora offers a Postman collection, which contains sample RESTful API requests for a cloud recording. You can use the sample requests to:
 
 - Record a live broadcast in composite recording mode
-- Configure the video layout and update the layout during recording
+- Configure the video layout or update the layout during recording
 - Store the recorded files in the third-party cloud storage that you specify.
 
-To know more about what you can do with Cloud Recording RESTful APIs, refer to [Agora Cloud Recording RESTful API](https://docs.agora.io/en/cloud-recording/cloud_recording_api_rest?platform=All%20Platforms).
+To learn more about what you can do with the Cloud Recording RESTful APIs, see [Agora Cloud Recording RESTful API](https://docs.agora.io/en/cloud-recording/cloud_recording_api_rest?platform=All%20Platforms).
 
 # Prerequisites
 
@@ -31,9 +31,9 @@ You can find more details in the [Cloud Recording RESTful API Quickstart](https:
   - `CustomerID`: Find your Customer ID and Customer Certificate on the RESTful API page in [Console](https://console.agora.io/). See [RESTful API authentication](https://docs.agora.io/en/faq/restful_authentication) for details.
   - `CustomerCertificate`: Find your Customer ID and Customer Certificate on the RESTful API page in [Console](https://console.agora.io/). See [RESTful API authentication](https://docs.agora.io/en/faq/restful_authentication) for details.
   - `resourceId`: You do not need to enter any value for this variable. This variable is automatically populated with the response of the `acquire` method.
-  - `AccessChannel`: Name of the channel that you want to record.
+  - `AccessChannel`: The name of the channel that you want to record.
   - `RecordingUID`: String that contains the UID of the recording client, for example `"527841"`. The UID needs to meet the following requirements:
-    - It is a 32-bit unsigned integer within the range between 1 and (2<sup>32</sup>-1).
+    - It is a 32-bit unsigned integer within the range of 1 and (2<sup>32</sup>-1).
     - It is unique and does not clash with any existing UID in the channel.
     - It should not be a string. Ensure that all UIDs in the channel are integers.
   - `Vender`: The third-party cloud storage vendor.
@@ -61,7 +61,7 @@ You can find more details in the [Cloud Recording RESTful API Quickstart](https:
   - `SecretKey`: The secret key of the third-party cloud storage.
   - `sid`: You do not need to enter any value for this variable. This variable is automatically populated with the response of the `start` method.
 - Open Postman and import `Cloud_Recording.postman_collection.json` and `Cloud_Recording.postman_environment.json`.
-- Make sure you select the `Agora-Development` environment.
+- Ensure that you select the `Agora-Development` environment.
 ![img](./pics/select_env.png)
 
 
@@ -69,21 +69,24 @@ You can find more details in the [Cloud Recording RESTful API Quickstart](https:
 
 ## Acquire the resource ID
 
-After you set up the environment in Postman and get your live stream running, call the `acquire` method to get your resource ID. To do so, double-click **acquire** to open the request in a new tab, and click **Send** to send the request. You can find the response of the request in the **Response** section.
+After you set up the environment in Postman and get your live stream running, call `acquire` to get your resource ID. To do so, double-click **acquire** to open the request in a new tab, and click **Send** to send the request. You can find the response of the request in the **Response** section.
 
 ![img](./pics/acquire_response.png)
 
-## Start and stop recording
+## Start and stop a recording
 
-Now that you have your resource ID, you can call the `start` method to begin recording and the `stop` method to end recording.
+Now that you have your resource ID, you can call `start` to begin a recording and the `stop` method to end it.
 
-> The resource ID is valid for five minutes, so you need to start recording with this resource ID within five minutes.
+> The resource ID is valid for five minutes, so you need to start a recording with this resource ID within five minutes.
 
-You can also call the `query` and the `updateLayout` methods during a recording session. The `query` method allows you to know the status of the recording, and the `updateLayout` method allows you to change the layout configuration of the recording in composite recording mode. 
+You can also call `query` and `updateLayout` in a recording session:
+
+- The `query` method enables you to get the status of the recording.
+- The `updateLayout` method enables you to change the layout configuration of the recording in composite recording mode. 
 
 
 
 ## Play recorded files online
 
-If the media streams are successfully recorded, you can find recorded files in the specified third-party cloud storage and play them online. Refer to [Play Recorded Files Online](https://docs.agora.io/en/cloud-recording/cloud_recording_onlineplay?platform=All%20Platforms) for more information.
+If the media streams are successfully recorded, you can find recorded files in the specified third-party cloud storage and play them online. See [Play Recorded Files Online](https://docs.agora.io/en/cloud-recording/cloud_recording_onlineplay?platform=All%20Platforms) for more information.
 
