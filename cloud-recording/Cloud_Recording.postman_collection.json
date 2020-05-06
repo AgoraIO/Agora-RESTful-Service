@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "7914a458-6bdc-4a86-a9b9-49ee69d28a44",
+		"_postman_id": "1faf679b-f127-496b-8cef-ac56761b814f",
 		"name": "Cloud_Recording",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -11,7 +11,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "4def61c6-2dfb-452c-8839-ea0a24f2f0b9",
+						"id": "fa27282f-628b-46ad-a6dd-ef6efd680600",
 						"exec": [
 							"var jsonData = JSON.parse(responseBody);",
 							"var resourceId = jsonData.resourceId;",
@@ -24,7 +24,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "ea0e7e80-3278-4d5c-a214-1a30b810c6e5",
+						"id": "5c8116df-3f7d-4945-9ff1-9ed519d80887",
 						"exec": [
 							""
 						],
@@ -86,7 +86,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "20a4d1e4-ef00-4b08-8273-682c89c4860b",
+						"id": "d7a023ad-5d36-48ed-b581-ecd78509bc63",
 						"exec": [
 							"var jsonData = JSON.parse(responseBody);",
 							"var sid = jsonData.sid;",
@@ -124,7 +124,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"cname\":\"{{AccessChannel}}\",\n\t\"uid\":\"{{RecordingUID}}\",\n\t\"clientRequest\":{\n\t\t\"recordingConfig\":{\n\t\t\t\"maxIdleTime\":120,\n\t\t\t\"streamTypes\":2,\n\t\t\t\"audioProfile\":1,\n\t\t\t\"channelType\":1,\n\t\t\t\"videoStreamType\":0,\n\t\t\t\"transcodingConfig\":{\n\t\t\t\t\"width\":360,\n\t\t\t\t\"height\":640,\n\t\t\t\t\"fps\":24,\n\t\t\t\t\"bitrate\":800,\n\t\t\t\t\"mixedVideoLayout\":1,\n\t\t\t\t\"maxResolutionUid\":\"1\"\n\t\t\t\t}\n\t\t\t},\n\t\t\"storageConfig\":{\n\t\t\t\"vendor\":{{Vendor}},\n\t\t\t\"region\":{{Region}},\n\t\t\t\"bucket\":\"{{Bucket}}\",\n\t\t\t\"accessKey\":\"{{AccessKey}}\",\n\t\t\t\"secretKey\":\"{{SecretKey}}\"\n\t\t}\t\n\t}\n} \n"
+					"raw": "{\n\t\"cname\":\"{{AccessChannel}}\",\n\t\"uid\":\"{{RecordingUID}}\",\n\t\"clientRequest\":{\n\t\t\"token\":\"{{token}}\",\n\t\t\"recordingConfig\":{\n\t\t\t\"maxIdleTime\":120,\n\t\t\t\"streamTypes\":2,\n\t\t\t\"audioProfile\":1,\n\t\t\t\"channelType\":1,\n\t\t\t\"videoStreamType\":0,\n\t\t\t\"transcodingConfig\":{\n\t\t\t\t\"width\":360,\n\t\t\t\t\"height\":640,\n\t\t\t\t\"fps\":24,\n\t\t\t\t\"bitrate\":800,\n\t\t\t\t\"mixedVideoLayout\":1,\n\t\t\t\t\"maxResolutionUid\":\"1\"\n\t\t\t\t}\n\t\t\t},\n\t\t\"storageConfig\":{\n\t\t\t\"vendor\":{{Vendor}},\n\t\t\t\"region\":{{Region}},\n\t\t\t\"bucket\":\"{{Bucket}}\",\n\t\t\t\"accessKey\":\"{{AccessKey}}\",\n\t\t\t\"secretKey\":\"{{SecretKey}}\"\n\t\t}\t\n\t}\n} \n"
 				},
 				"url": {
 					"raw": "https://api.agora.io/v1/apps/{{APPID}}/cloud_recording/resourceid/{{resourceId}}/mode/mix/start",
@@ -155,7 +155,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "34e06486-5aef-42f4-91ed-4150f98d9560",
+						"id": "91c130f2-2259-4757-8e92-af949f68a19f",
 						"exec": [
 							""
 						],
@@ -229,7 +229,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "e55e1b30-631d-4d11-b70d-711948f077c5",
+						"id": "26b50fbf-a690-4cbe-815d-b8ddd302a0c1",
 						"exec": [
 							""
 						],
@@ -297,7 +297,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "e55e1b30-631d-4d11-b70d-711948f077c5",
+						"id": "f4fa2163-dabe-41a0-b886-3d7fe4dd6d42",
 						"exec": [
 							""
 						],
