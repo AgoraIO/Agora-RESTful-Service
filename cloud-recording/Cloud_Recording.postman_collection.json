@@ -124,7 +124,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"cname\":\"{{AccessChannel}}\",\n\t\"uid\":\"{{RecordingUID}}\",\n\t\"clientRequest\":{\n\t\t\"token\":\"{{token}}\",\n\t\t\"recordingConfig\":{\n\t\t\t\"maxIdleTime\":120,\n\t\t\t\"streamTypes\":2,\n\t\t\t\"audioProfile\":1,\n\t\t\t\"channelType\":1,\n\t\t\t\"videoStreamType\":0,\n\t\t\t\"transcodingConfig\":{\n\t\t\t\t\"width\":360,\n\t\t\t\t\"height\":640,\n\t\t\t\t\"fps\":24,\n\t\t\t\t\"bitrate\":800,\n\t\t\t\t\"mixedVideoLayout\":1,\n\t\t\t\t\"maxResolutionUid\":\"1\"\n\t\t\t\t}\n\t\t\t},\n\t\t\"storageConfig\":{\n\t\t\t\"vendor\":{{Vendor}},\n\t\t\t\"region\":{{Region}},\n\t\t\t\"bucket\":\"{{Bucket}}\",\n\t\t\t\"accessKey\":\"{{AccessKey}}\",\n\t\t\t\"secretKey\":\"{{SecretKey}}\"\n\t\t}\t\n\t}\n} \n"
+					"raw": "{\n\t\"cname\":\"{{AccessChannel}}\",\n\t\"uid\":\"{{RecordingUID}}\",\n\t\"clientRequest\":{\n\t\t\"token\":\"{{token}}\",\n\t\t\"recordingConfig\":{\n\t\t\t\"maxIdleTime\":120,\n\t\t\t\"streamTypes\":2,\n\t\t\t\"audioProfile\":1,\n\t\t\t\"channelType\":1,\n\t\t\t\"videoStreamType\":0,\n\t\t\t\"transcodingConfig\":{\n\t\t\t\t\"width\":360,\n\t\t\t\t\"height\":640,\n\t\t\t\t\"fps\":30,\n\t\t\t\t\"bitrate\":600,\n\t\t\t\t\"mixedVideoLayout\":1,\n\t\t\t\t\"maxResolutionUid\":\"1\"\n\t\t\t\t}\n\t\t\t},\n\t\t\"storageConfig\":{\n\t\t\t\"vendor\":{{Vendor}},\n\t\t\t\"region\":{{Region}},\n\t\t\t\"bucket\":\"{{Bucket}}\",\n\t\t\t\"accessKey\":\"{{AccessKey}}\",\n\t\t\t\"secretKey\":\"{{SecretKey}}\"\n\t\t}\t\n\t}\n} \n"
 				},
 				"url": {
 					"raw": "https://api.agora.io/v1/apps/{{APPID}}/cloud_recording/resourceid/{{resourceId}}/mode/mix/start",
