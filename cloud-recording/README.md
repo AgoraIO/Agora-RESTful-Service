@@ -36,7 +36,7 @@ You can find more details in the [Cloud Recording RESTful API Quickstart](https:
     - It is a 32-bit unsigned integer within the range of 1 and (2<sup>32</sup>-1).
     - It is unique and does not clash with any existing UID in the channel.
     - It should not be a string. Ensure that all UIDs in the channel are integers.
-  - `Vender`: The third-party cloud storage vendor.
+  - `Vendor`: The third-party cloud storage vendor.
   - `Region`: The regional information specified by the third-party cloud storage. When the third-party cloud storage is [Amazon S3](https://aws.amazon.com/s3/?nc1=h_ls) (`vendor` = 1):
       - `0`: US_EAST_1
       - `1`: US_EAST_2
